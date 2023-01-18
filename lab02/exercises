@@ -1,0 +1,9 @@
+I 
+ a)
+	1. sort -t: -k3 -n  group
+	2. find -type f  -mtime -7  -printf "%f %M %Tc \n"
+	3. find -type f -executable -printf "%a kb=%s\n"
+b)
+	1. find -executable -readable -printf "%f  %M \n"
+	2. find \( -name "*.cpp" -or -name "*.h" -or -name "*.c" \)  -printf "%f   %t   kb=%s \n"
+

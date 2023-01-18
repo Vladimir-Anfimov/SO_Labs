@@ -1,0 +1,125 @@
+______________INPUT______________
+
+DATELE INITIALE DIN FISIERUL PERECHI.BIN:
+
+(1, 0)
+(2, 0)
+(3, 0)
+(4, 0)      PERECHI.BIN
+(5, 0)
+(6, 0)
+(7, 0)
+(8, 0)
+(9, 0)
+(10, 0)
+
+DATELE DIN FISIERELE CMD1.BIN, CMD2.BIN, CMD3.BIN, CMD4.BIN
+
+(1, 100)
+(2, 200)
+(3, 300)        CMD1.BIN
+(4, 400)
+(5, 500)
+
+(2, 250)
+(3, 350)
+(4, 450)        CMD2.BIN
+(5, 550)
+(1, 150)
+
+(6, 600)        CMD3.BIN
+
+(7, 70)
+(8, 80)         CMD4.BIN
+(9, 90)
+(10, 1000)
+
+
+______________OUTPUT______________
+
+DATELE FINALE DIN FISIERUL PERECHI.BIN:
+
+(1, 250)
+(2, 450)
+(3, 650)
+(4, 850)
+(5, 1050)
+(6, 600)
+(7, 70)
+(8, 80)
+(9, 90)
+(10, 1000)
+
+
+______________PRINTAREA_PE_PARCURSUL_EXECUTIEI______________
+
+COMANDA: ./mycrit perechi.bin comenzi1.bin & 
+         ./mycrit perechi.bin comenzi2.bin & 
+         ./mycrit  perechi.bin comenzi3.bin &  
+         ./mycrit perechi.bin comenzi4.bin 
+
+
+[1] 23663
+[2] 23664
+[3] 23665
+[ProcessID:23663] Incep apelul de punere a blocajului in mod blocant pe perechea (1, 0).
+[ProcessID:23663] Blocaj reusit!
+[ProcessID:23664] Incep apelul de punere a blocajului in mod blocant pe perechea (2, 0).
+[ProcessID:23664] Blocaj reusit!
+[ProcessID:23665] Incep apelul de punere a blocajului in mod blocant pe perechea (6, 0).
+[ProcessID:23665] Blocaj reusit!
+[ProcessID:23666] Incep apelul de punere a blocajului in mod blocant pe perechea (7, 0).
+[ProcessID:23666] Blocaj reusit!
+[ProcesID:23663] Terminat. S-a inlocuit perechea (1, 0) cu (1, 100).
+[ProcesID:23663] Lacatul de pe perechea nou modificata (1, 100) a fost scos.
+[ProcessID:23663] Incep apelul de punere a blocajului in mod blocant pe perechea (2, 0).
+[ProcesID:23664] Terminat. S-a inlocuit perechea (2, 0) cu (2, 250).
+[ProcesID:23664] Lacatul de pe perechea nou modificata (2, 250) a fost scos.
+[ProcessID:23664] Incep apelul de punere a blocajului in mod blocant pe perechea (3, 0).
+[ProcessID:23663] Blocaj reusit!
+[ProcessID:23664] Blocaj reusit!
+[ProcesID:23665] Terminat. S-a inlocuit perechea (6, 0) cu (6, 600).
+[ProcesID:23665] Lacatul de pe perechea nou modificata (6, 600) a fost scos.
+[ProcesID:23666] Terminat. S-a inlocuit perechea (7, 0) cu (7, 70).
+[ProcesID:23666] Lacatul de pe perechea nou modificata (7, 70) a fost scos.
+[ProcessID:23666] Incep apelul de punere a blocajului in mod blocant pe perechea (8, 0).
+[ProcessID:23666] Blocaj reusit!
+[ProcesID:23663] Terminat. S-a inlocuit perechea (2, 250) cu (2, 450).
+[ProcesID:23664] Terminat. S-a inlocuit perechea (3, 0) cu (3, 350).
+[ProcesID:23663] Lacatul de pe perechea nou modificata (2, 450) a fost scos.
+[ProcesID:23664] Lacatul de pe perechea nou modificata (3, 350) a fost scos.
+[ProcessID:23663] Incep apelul de punere a blocajului in mod blocant pe perechea (3, 350).
+[ProcessID:23663] Blocaj reusit!
+[ProcessID:23664] Incep apelul de punere a blocajului in mod blocant pe perechea (4, 0).
+[ProcessID:23664] Blocaj reusit!
+[ProcesID:23666] Terminat. S-a inlocuit perechea (8, 0) cu (8, 80).
+[ProcesID:23666] Lacatul de pe perechea nou modificata (8, 80) a fost scos.
+[ProcessID:23666] Incep apelul de punere a blocajului in mod blocant pe perechea (9, 0).
+[ProcessID:23666] Blocaj reusit!
+[ProcesID:23663] Terminat. S-a inlocuit perechea (3, 350) cu (3, 650).
+[ProcesID:23664] Terminat. S-a inlocuit perechea (4, 0) cu (4, 450).
+[ProcesID:23663] Lacatul de pe perechea nou modificata (3, 650) a fost scos.
+[ProcesID:23664] Lacatul de pe perechea nou modificata (4, 450) a fost scos.
+[ProcessID:23663] Incep apelul de punere a blocajului in mod blocant pe perechea (4, 450).
+[ProcessID:23663] Blocaj reusit!
+[ProcessID:23664] Incep apelul de punere a blocajului in mod blocant pe perechea (5, 0).
+[ProcessID:23664] Blocaj reusit!
+[ProcesID:23666] Terminat. S-a inlocuit perechea (9, 0) cu (9, 90).
+[ProcesID:23666] Lacatul de pe perechea nou modificata (9, 90) a fost scos.
+[ProcessID:23666] Incep apelul de punere a blocajului in mod blocant pe perechea (10, 0).
+[ProcessID:23666] Blocaj reusit!
+[ProcesID:23663] Terminat. S-a inlocuit perechea (4, 450) cu (4, 850).
+[ProcesID:23664] Terminat. S-a inlocuit perechea (5, 0) cu (5, 550).
+[ProcesID:23663] Lacatul de pe perechea nou modificata (4, 850) a fost scos.
+[ProcesID:23664] Lacatul de pe perechea nou modificata (5, 550) a fost scos.
+[ProcessID:23664] Incep apelul de punere a blocajului in mod blocant pe perechea (1, 100).
+[ProcessID:23663] Incep apelul de punere a blocajului in mod blocant pe perechea (5, 550).
+[ProcessID:23664] Blocaj reusit!
+[ProcessID:23663] Blocaj reusit!
+[ProcesID:23666] Terminat. S-a inlocuit perechea (10, 0) cu (10, 1000).
+[ProcesID:23666] Lacatul de pe perechea nou modificata (10, 1000) a fost scos.
+[3]+  Done                    ./mycrit perechi.bin comenzi3.bin
+vladimir@vladimir:~/Desktop/Labs/lab07$ [ProcesID:23663] Terminat. S-a inlocuit perechea (5, 550) cu (5, 1050).
+[ProcesID:23664] Terminat. S-a inlocuit perechea (1, 100) cu (1, 250).
+[ProcesID:23663] Lacatul de pe perechea nou modificata (5, 1050) a fost scos.
+[ProcesID:23664] Lacatul de pe perechea nou modificata (1, 250) a fost scos.

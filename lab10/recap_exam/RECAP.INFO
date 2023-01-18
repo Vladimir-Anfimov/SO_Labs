@@ -1,0 +1,47 @@
+// CREARE N COPII AI PROCESULUI INITIAL TATA ---------------------------------------------------------
+
+for(i = 1; i <= N; i++)
+{
+    if(-1 == (pid=fork()) )
+    {
+        perror("Eroare la fork");  exit(2);
+    }
+    if(0 == pid)
+    {
+        printf("Sunt procesul fiu %d, avand PID-ul: %d, iar parintele meu este procesul cu PID-ul: %d.\n", i, getpid(), getppid() );
+        return i;  // Important: fiul nu trebuie să reia execuția buclei for, ca să nu creeze la rândul lui alte procese fii !
+    }
+}
+
+/* Așteptarea terminării tuturor celor N fii. */
+for(i = 1; i<= N; i++)  // Procesul inițial va aștepta terminarea celor N fii; altfel, câteodată (i.e., nu neapărat la toate execuțiile)
+    wait(NULL);  
+
+
+
+// CREARE LISTA DE N COPII (N PROCESE INLANTUITE) -------------------------------------
+
+for(i = 1; i < N; i++)
+{
+    if(-1 == (pid=fork()) )
+    {
+        perror("Eroare la fork");  exit(2);
+    }
+
+    if(0 != pid)
+    {
+        wait(&codterm);
+        printf("Sunt procesul %d, avand PID-ul: %d, parintele are PID-ul: %d, iar fiul creat are PID-ul: %d si s-a terminat cu codul: %d.\n",
+                    i, getpid(), getppid(), pid, codterm>>8 );
+
+        return i;  // Important: tatăl nu trebuie să reia execuția buclei for, ca să nu creeze un al doilea proces fiu direct, apoi un al treilea, ș.a.m.d.
+    }
+    else
+    {
+        if(i == N-1)  // Acesta este ultimul proces din lanț, care nu va crea un proces fiu.
+        {
+            printf("Sunt procesul ultim, %d din lantul de procese, avand PID-ul: %d, iar parintele meu este procesul cu PID-ul: %d.\n", N, getpid(), getppid() );
+            return N;
+        }
+    }
+}
